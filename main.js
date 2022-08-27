@@ -42,3 +42,5 @@ function onLineCalled(line_number, line_text){
     }
 }
 //Main
+
+console.log('Jeroo Features loaded');

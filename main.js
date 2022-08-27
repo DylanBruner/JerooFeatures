@@ -1,4 +1,4 @@
-//Injection helpers
+//Injection Code
 function isLineSelected(line_element){return line_element.children[0].classList.contains('activeline-highlight')}
 function getCodeLines(){return document.getElementsByClassName('CodeMirror-code')[0].children}
 function getLineText(element){
@@ -30,15 +30,19 @@ setInterval(() => {
             }
         }
     } catch(e){}
-}, 10);
-//Injection helpers
+}, 10); //This is not a good way to do this, but it works for now.
+//Injection Code
 
 //Main
 function onLineCalled(line_number, line_text){
     if(line_text.endsWith('playBoomSound')){new Audio('https://www.myinstants.com/media/sounds/vine-boom.mp3').play()}
-    else if(line_text.includes('//')){
+    else if(line_text.includes('//RJS: ')){
         mixin = line_text.split('//')[1].trim();
         if(mixin.includes('RJS:')){eval(mixin.replace('RJS:', ''))}
+    }
+    else if(line_text.includes('//url=')){
+        url = line_text.split('//url=')[1].trim();
+        new Audio(url).play();
     }
 }
 //Main

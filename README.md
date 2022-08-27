@@ -1,5 +1,5 @@
 # JerooFeatures
-bookmarklet doesnt work as of now because of githubs mime type i might fix this 
+bookmarklet doesnt work as of now because of githubs mime type i might fix this (doesnt work when loading from url can still use the oneline.js)
 
 
 <h1>Features</h1>

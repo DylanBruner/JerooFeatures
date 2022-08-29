@@ -16,4 +16,7 @@ testJeroo.blank();//playBoomSound()
 Play a sound from a url
 <br>
 testJeroo.blank();//playSound(<url>)
+<br><br>
+Log text on the side of the screen
 <br>
+testJeroo.blank();//logText(<text>)

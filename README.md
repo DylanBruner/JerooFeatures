@@ -25,3 +25,7 @@ testJeroo.blank();//playSound(\<url>)
 Log text on the side of the screen
 <br>
 testJeroo.blank();//log(\<text>)
+<br><br>
+Text to Speach
+<br>
+testJeroo.blank();//tts(\<text>)

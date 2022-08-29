@@ -12,7 +12,7 @@ document.head.appendChild(link);
 setTimeout(() => {
     if (!document.location.href.includes('www.jeroo.org/beta/dashboard')){
         alertify.error('JF - Not on the Jeroo Code Editor!!', 5)
-        return 0;
+        return 0; //Stop the code from running!
     }
 
     //Code to observe the page and detect stuffs
@@ -124,6 +124,13 @@ setTimeout(() => {
         else if(line_text.includes('playSound(')){new Audio(line_text.split('playSound(')[1].split(')')[0]).play(); logAction('Playing sound')}
         //Log text to screen
         else if(line_text.includes('log(')){alertify.success(line_text.split('log(')[1].split(')')[0])}
+        //Text To Speach
+        else if(line_text.includes('tts(')){
+            msg = new SpeechSynthesisUtterance();
+            msg.text = line_text.split('tts(')[1].split(')')[0]
+            window.speechSynthesis.speak(msg);
+            logAction(`Speaking ${msg.text}`)
+        }
     }
     //====================
     

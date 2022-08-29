@@ -91,7 +91,9 @@ setTimeout(() => {
                 else if (option == 'toggle-log'){localStorage['logActions'] = localStorage['logActions'] == 'true' ? 'false' : 'true'; alertify.success('Logging ' + (localStorage['logActions'] == 'true' ? 'Enabled' : 'Disabled'))}
                 else if (option == 'copy-helpers'){
                     copyTextToClipboard(["method hopUntilObstacle(){while (isClear(AHEAD)){hop();}}",
-                                         "method safeHop(){if (!isNet(AHEAD) && !isWater(AHEAD)){hop();}}"].join('\n'))
+                                         "method safeHop(){if (!isNet(AHEAD) && !isWater(AHEAD)){hop();}}",
+                                         "method hopAndPlant(hop(); plant();)",
+                                         "method plantAndHop(plant(); hop();)"].join('\n'))
                     alertify.success('Copied helper functions to clipboard')
                 }
                 else if (option == 'disable-menu'){localStorage['disableMenu'] = 'true'; alertify.success('Menu Disabled')}

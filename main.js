@@ -86,7 +86,8 @@ setTimeout(() => {
                                             "toggle-log - (toggle most logging)",
                                             "copy-helpers - (copy helper functions)",
                                             "disable-menu - (stop injecting the menubar button)",
-                                            "copy-blank - copy the method required to run jf commands"].join('\n'))}
+                                            "copy-blank - (copy the method required to run jf commands at full speed)",
+                                            "github - (opens the github page)"].join('\n'))}
                 else if (option == 'toggle'){enabled = !enabled; alertify.success('' ? 'Disabled Jeroo Features' : 'Enabled Jeroo Features')}
                 else if (option == 'toggle-log'){localStorage['logActions'] = localStorage['logActions'] == 'true' ? 'false' : 'true'; alertify.success('Logging ' + (localStorage['logActions'] == 'true' ? 'Enabled' : 'Disabled'))}
                 else if (option == 'copy-helpers'){
@@ -98,6 +99,7 @@ setTimeout(() => {
                 }
                 else if (option == 'disable-menu'){localStorage['disableMenu'] = 'true'; alertify.success('Menu Disabled')}
                 else if (option == 'copy-blank'){copyTextToClipboard("method blank(){turn(LEFT); turn(LEFT); turn(LEFT); turn(LEFT);}")}
+                else if (option == 'github'){window.open('https://github.com/DylanBruner/JerooFeatures')}
                 else {alertify.error('Invalid command')}
             })
         }

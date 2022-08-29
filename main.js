@@ -114,6 +114,8 @@ setTimeout(() => {
         else if(line_text.includes('//RJS: ')){mixin = line_text.split('//')[1].trim(); if(mixin.includes('RJS:')){eval(mixin.replace('RJS:', ''))}; logAction('Executed RJS: ' + mixin)}
         //Play sound from URL
         else if(line_text.includes('playSound(')){new Audio(line_text.split('playSound(')[1].split(')')[0]).play(); logAction('Playing sound')}
+        //Log text to screen
+        else if(line.text.includes('logText(')){logAction(line_text.split('logText(')[1].split(')')[0])}
     }
     //====================
     

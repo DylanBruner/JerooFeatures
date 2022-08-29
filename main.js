@@ -10,8 +10,8 @@ document.head.appendChild(link);
 
 //Give time for alertify to load
 setTimeout(() => {
-    if (!document.location.includes('www.jeroo.org/beta/dashboard')){
-        alertify.error('JF - Not on the Jeroo Code Editor!!')
+    if (!document.location.href.includes('www.jeroo.org/beta/dashboard')){
+        alertify.error('JF - Not on the Jeroo Code Editor!!', 5)
         return 0;
     }
 

@@ -94,7 +94,8 @@ setTimeout(() => {
                     copyTextToClipboard(["method hopUntilObstacle(){while (isClear(AHEAD)){hop();}}",
                                          "method safeHop(){if (!isNet(AHEAD) && !isWater(AHEAD)){hop();}}",
                                          "method hopAndPlant(hop(); plant();)",
-                                         "method plantAndHop(plant(); hop();)"].join('\n'))
+                                         "method plantAndHop(plant(); hop();)",
+                                         "method blank(){turn(LEFT); turn(LEFT); turn(LEFT); turn(LEFT);}"].join('\n'))
                     alertify.success('Copied helper functions to clipboard')
                 }
                 else if (option == 'disable-menu'){localStorage['disableMenu'] = 'true'; alertify.success('Menu Disabled')}

@@ -86,7 +86,7 @@ setTimeout(() => {
                                             "toggle-log - (toggle most logging)",
                                             "copy-helpers - (copy helper functions)",
                                             "disable-menu - (stop injecting the menubar button)"].join('\n'))}
-                else if (option == 'toggle'){enabled = !enabled; alertify.success('' ? 'Enabled Jeroo Features' : 'Disabled Jeroo Features')}
+                else if (option == 'toggle'){enabled = !enabled; alertify.success('' ? 'Disabled Jeroo Features' : 'Enabled Jeroo Features')}
                 else if (option == 'toggle-log'){localStorage['logActions'] = localStorage['logActions'] == 'true' ? 'false' : 'true'; alertify.success('Logging ' + (localStorage['logActions'] == 'true' ? 'Enabled' : 'Disabled'))}
                 else if (option == 'copy-helpers'){
                     copyTextToClipboard(["method hopUntilObstacle(){while (isClear(AHEAD)){hop();}}",

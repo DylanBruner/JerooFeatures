@@ -123,5 +123,4 @@ setTimeout(() => {
     
     alertify.notify('Jeroo features loaded!', 'success', 5)
     alertify.notify('Logging ' + (localStorage['logActions'] == 'true' ? 'enabled' : 'disabled'), 'success', 5)
-    alertify.notify('Warning dont raise the speed above 3', 'warning', 5)
 },1000)

@@ -82,7 +82,7 @@ setTimeout(() => {
             menu_item.addEventListener('click', () => {
                 option = prompt('Enter a command (ex. help)')
                 if (option == 'help'){alert(["help - (displays this menu)",
-                                             "toggle - (toggles Jeroo features)",
+                                            "toggle - (toggles Jeroo features)",
                                             "toggle-log - (toggle most logging)",
                                             "copy-helpers - (copy helper functions)",
                                             "disable-menu - (stop injecting the menubar button)",

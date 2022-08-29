@@ -69,10 +69,11 @@ setTimeout(() => {
     function logAction(action){if (localStorage['logActions'] == 'true'){alertify.success(action)}}
     //====================
     
+    //Setup menubar
     (function (){
         //If disableMenu is either undefined or false, then show the menu
         if (localStorage['disableMenu'] == undefined || localStorage['disableMenu'] == 'false'){
-            let menu_bar = document.getElementsByClassName('mat-toolbar-row')[0].children[1].children[1].children
+            let menu_bar  = document.getElementsByClassName('mat-toolbar-row')[0].children[1].children[1].children
             let menu_item = menu_bar[menu_bar.length - 1].cloneNode(true)
             
             menu_item.getElementsByClassName('mat-button-wrapper')[0].innerText = 'Jeroo Features'
@@ -118,7 +119,7 @@ setTimeout(() => {
         //Play sound from URL
         else if(line_text.includes('playSound(')){new Audio(line_text.split('playSound(')[1].split(')')[0]).play(); logAction('Playing sound')}
         //Log text to screen
-        else if(line_text.includes('logText(')){alertify.success(line_text.split('logText(')[1].split(')')[0])}
+        else if(line_text.includes('log(')){alertify.success(line_text.split('logText(')[1].split(')')[0])}
     }
     //====================
     

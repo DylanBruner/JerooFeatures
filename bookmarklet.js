@@ -1,1 +1,1 @@
-!function(){var request=new XMLHttpRequest;request.open("GET","https://raw.githubusercontent.com/DylanBruner/JerooFeatures/main/main.js",!0),request.onload=function(){200<=request.status&&request.status<400?eval(request.responseText):console.log("Error")},request.send()}();
+javascript: !function(){var request=new XMLHttpRequest;request.open("GET","https://raw.githubusercontent.com/DylanBruner/JerooFeatures/main/main.js",!0),request.onload=function(){200<=request.status&&request.status<400?eval(request.responseText):console.log("Error")},request.send()}();

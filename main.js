@@ -12,7 +12,7 @@ document.head.appendChild(link);
 setTimeout(() => {
     if (!document.location.includes('www.jeroo.org/beta/dashboard')){
         alertify.error('JF - Not on the Jeroo Code Editor!!')
-        return;
+        return 0;
     }
 
     //Code to observe the page and detect stuffs

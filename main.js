@@ -1,4 +1,3 @@
-
 //Load alertifyjs
 var script = document.createElement('script');
 script.src = 'https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/alertify.min.js';
@@ -11,6 +10,11 @@ document.head.appendChild(link);
 
 //Give time for alertify to load
 setTimeout(() => {
+    if (!document.location.includes('www.jeroo.org/beta/dashboard')){
+        alertify.error('JF - Not on the Jeroo Code Editor!!')
+        return;
+    }
+
     //Code to observe the page and detect stuffs
     function isLineSelected(line_element){return line_element.children[0].classList.contains('activeline-highlight')}
     function getCodeLines(){return document.getElementsByClassName('CodeMirror-code')[0].children}

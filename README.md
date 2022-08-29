@@ -1,14 +1,19 @@
 # JerooFeatures
 
-By default it will only work with speeds around three and under but if you can use the method below as your 'blank function' which will make it work with any speed
+By default it will only work with speeds around 3 or but the 'blank function' can be found in the jf menu and used to run at full speeds
 <br>
-method blank(){turn(LEFT); turn(LEFT); turn(LEFT); turn(LEFT);}
 
 <h1>Features</h1>
 
-1. Execute javascript Syntax
-   - testJeroo.blank();//RJS: alert(1)
-3. Play a boom sound effect
-   - testJeroo.blank();//playBoomSound()
-5. Play a sound
-   - testJeroo.blank();//playSound(<url>)
+Run javascript from jeroo
+<br>
+testJeroo.blank();//RJS: alert(1)
+<br><br>
+Play boom sound
+<br>
+testJeroo.blank();//playBoomSound()
+<br><br>
+Play a sound from a url
+<br>
+testJeroo.blank();//playSound(<url>)
+<br>

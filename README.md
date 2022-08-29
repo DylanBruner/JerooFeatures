@@ -1,6 +1,7 @@
 # JerooFeatures
 
 By default it will only work with speeds around three and under but if you can use the method below as your 'blank function' which will make it work with any speed
+<br>
 method blank(){turn(LEFT); turn(LEFT); turn(LEFT); turn(LEFT);}
 
 <h1>Features</h1>

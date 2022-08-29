@@ -119,7 +119,7 @@ setTimeout(() => {
         //Play sound from URL
         else if(line_text.includes('playSound(')){new Audio(line_text.split('playSound(')[1].split(')')[0]).play(); logAction('Playing sound')}
         //Log text to screen
-        else if(line_text.includes('log(')){alertify.success(line_text.split('logText(')[1].split(')')[0])}
+        else if(line_text.includes('log(')){alertify.success(line_text.split('log(')[1].split(')')[0])}
     }
     //====================
     

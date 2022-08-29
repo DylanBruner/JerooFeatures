@@ -24,4 +24,4 @@ testJeroo.blank();//playSound(\<url>)
 <br><br>
 Log text on the side of the screen
 <br>
-testJeroo.blank();//logText(\<text>)
+testJeroo.blank();//log(\<text>)

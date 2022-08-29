@@ -85,7 +85,8 @@ setTimeout(() => {
                                              "toggle - (toggles Jeroo features)",
                                             "toggle-log - (toggle most logging)",
                                             "copy-helpers - (copy helper functions)",
-                                            "disable-menu - (stop injecting the menubar button)"].join('\n'))}
+                                            "disable-menu - (stop injecting the menubar button)",
+                                            "copy-blank - copy the method required to run jf commands"].join('\n'))}
                 else if (option == 'toggle'){enabled = !enabled; alertify.success('' ? 'Disabled Jeroo Features' : 'Enabled Jeroo Features')}
                 else if (option == 'toggle-log'){localStorage['logActions'] = localStorage['logActions'] == 'true' ? 'false' : 'true'; alertify.success('Logging ' + (localStorage['logActions'] == 'true' ? 'Enabled' : 'Disabled'))}
                 else if (option == 'copy-helpers'){
@@ -94,6 +95,7 @@ setTimeout(() => {
                     alertify.success('Copied helper functions to clipboard')
                 }
                 else if (option == 'disable-menu'){localStorage['disableMenu'] = 'true'; alertify.success('Menu Disabled')}
+                else if (option == 'copy-blank'){copyTextToClipboard("method blank(){turn(LEFT); turn(LEFT); turn(LEFT); turn(LEFT);}")}
                 else {alertify.error('Invalid command')}
             })
         }
